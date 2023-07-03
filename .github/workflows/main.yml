@@ -10,7 +10,7 @@
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   AZURE_WEBAPP_NAME: timeseet-test-spa   # set this to your application's name
