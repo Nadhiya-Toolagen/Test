@@ -18,11 +18,6 @@ jobs:
         with:
           node-version: '18.16.1'
 
-      - name: Install dependencies and build Angular app
-        run: |
-          cd TimesheetManagementUI && npm install --force
-          cd TimesheetManagementUI && npm run build --prod
-
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
