@@ -22,7 +22,7 @@
     "stylus": "0.42.3"
   },
   "engines": {
-    "node": "18.16.1"
+    "node": "~6.9.4"
   },
   "devDependencies": {
     "@angular/cli": "^6.0.0",
@@ -30,8 +30,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon ./server.js localhost 3000",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ng build --prod"
+    "dev": "pm2 start server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
