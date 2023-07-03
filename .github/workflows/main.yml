@@ -17,13 +17,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18.16.1'
-
-      - name: Install dependencies and build Angular app
-        run: |
-          cd TimesheetManagementUI
-          npm install --force
-          npm run build --prod
-
+      
       - name: Move dist files to wwwroot
         run: mv TimesheetManagementUI/dist/* /home/site/wwwroot/
 
