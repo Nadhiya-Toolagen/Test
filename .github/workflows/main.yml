@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies and build Angular app
         run: |
           cd TimesheetManagementUI
-          npm install
+          npm install --force
           npm run build --prod
 
       - name: Move dist files to wwwroot
