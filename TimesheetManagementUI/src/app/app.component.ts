@@ -36,7 +36,6 @@ export class AppComponent {
   logout() {
     localStorage.removeItem('currentUser');
     localStorage.removeItem('userRoleId');
-    alert('hi');
     this.router.navigate(['/login']);
   }
 
