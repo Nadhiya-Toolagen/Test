@@ -15,7 +15,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: timeseet-test-spa   # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: './TimesheetManagementUI/dist'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '18.16'                # set this to the node version to use
+  NODE_VERSION: '18.16.x'                # set this to the node version to use
 
 jobs:
   build:
@@ -33,6 +33,10 @@ jobs:
       run: |
         npm install
         npm run build --if-present
+    - name: npm install and build for angular
+      run: |
+        cd TimesheetManagementUI && npm install
+        cd TimesheetManagementUI && npm run build --prod
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
       with:
